@@ -5,4 +5,15 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Player\craft\" />
+    <Folder Include="dun\" />
+    <Folder Include="Player\inv\" />
+    <Folder Include="Player\attack\" />
+    <Folder Include="Player\resource\" />
+    <Folder Include="Player\PlayerClass\abilities\" />
+    <Folder Include="Player\PlayerClass\talents\" />
+    <Folder Include="systems\quests\" />
+  </ItemGroup>
+
 </Project>

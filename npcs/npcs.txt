@@ -1,0 +1,16 @@
+﻿all the npc in the game is in sections in game
+with player
+	elf
+section 1 citys
+	Strombard the main city
+		Bolvar
+		TheShopKeeper
+	IronMake the enemy city
+	Firestromb the goods city
+		TheShopKeeper
+section 2
+	the wild
+		TheWild
+section 3
+section 4
+section 5
