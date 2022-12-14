@@ -4,6 +4,7 @@ namespace GameEngineV
 {
     class Program
     {
+        Player.PlayerMain PlayerMain;
         static void Main()
         {
             Program program = new();
@@ -11,7 +12,8 @@ namespace GameEngineV
         }
         public void Start()
         {
-            Console.WriteLine("Hello world");
+            PlayerMain = new Player.PlayerMain();
+            PlayerMain.StartPlayerSystems();
         }
     }
 }
