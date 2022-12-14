@@ -7,39 +7,44 @@ namespace GameEngineV.Player.inv
 {
     public class InvSystem
     {
-        public items[] ItemInv;
+        public Items[] ItemInv;
         public int[] con;
         public int invindex;
         public InvSystem(int invspaces)
         {
-            ItemInv = new items[invspaces];
+            ItemInv = new Items[invspaces];
             for (int i = 0; i < invspaces; i++)
             {
-                ItemInv[i] = items.none;
+                ItemInv[i] = Items.none;
             }
         }
-        public items GetInvData(items item)
+        public bool GetInvData(Items item)
         {
             for (int i = 0; i < ItemInv.Length; i++)
             {
                 if (ItemInv[i] == item)
-                    return item;
+                    return true;
             }
-            return items.none;
+            return false;
         }
-        public void SetInvData(items invData, int cona)
+        public void SetInvData(Items invData, int cona)
         {
             for (int i = 0; i < ItemInv.Length; i++)
             {
-                if(ItemInv[i] == items.none)
+                if(ItemInv[i] == Items.none)
                 {
                     ItemInv[i] = invData;
                     con[i] = cona;
                     return;
                 }
+                else if(invData == ItemInv[i])
+                {
+                    con[i] += cona;
+                    return;
+                }
             }
         }
-        public void TakeFromInv(items invData, int cona)
+        public void TakeFromInv(Items invData, int cona)
         {
             for (int i = 0; i < ItemInv.Length; i++)
             {
@@ -47,7 +52,7 @@ namespace GameEngineV.Player.inv
                 {
                     if(cona == -1)
                     {
-                        ItemInv[i] = items.none;
+                        ItemInv[i] = Items.none;
                         con[i] = 0;
                         return;
                     }
@@ -58,6 +63,10 @@ namespace GameEngineV.Player.inv
                     }
                 }    
             }
+        }
+        public int GetInvLength()
+        {
+            return ItemInv.Length;
         }
     }
 }

@@ -10,9 +10,14 @@ namespace GameEngineV.Player
     {
         const int invspace = 10;
         public inv.InvSystem InvSystem;
+        private int BronzeCount;
         public void StartPlayerSystems()
         {
             InvSystem = new inv.InvSystem(invspace);
+        }
+        public void IncBronzeCount()
+        {
+            BronzeCount++;
         }
     }
 }

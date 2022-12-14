@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Player\craft\" />
     <Folder Include="dun\" />
     <Folder Include="Player\attack\" />
     <Folder Include="Player\resource\" />

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameEngineV
 {
-    public enum items
+    public enum Items
     {
         none = 0x00,
         Righteous = 0xff,
